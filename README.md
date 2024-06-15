@@ -15,10 +15,10 @@
 
 + [env.sh](./env.sh)：环境配置脚本
   + 可以完成conda环境配置、实验使用的大模型、embedding模型以及相关知识库的下载
-
+  + `history_24`文件夹下为相关知识库，由于纯CPU向量化较慢，二十四史选择只保留《三国志》进行实验测试。
 + [history_bot.py](./history_bot.py)：中国历史问答应用主要文件
-  + 包括Bot的搭建和聊天功能
-  + 由于纯CPU向量化较慢，二十四史选择只保留《三国志》
+  + 包括Bot的搭建和聊天功能，使用`intel-extension-for-transformers`中的组件`Neural Chat`进行搭建。
+  + 通过RAG来提高Bot的回复质量。
 
 ### 操作步骤
 
