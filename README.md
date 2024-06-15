@@ -4,10 +4,10 @@
 
 > 由于ModelScope实验平台并未提供Intel架构的显卡，所以使用平台提供的CPU环境进行实验。
 
-+ Intel(R) Xeon(R) Platinum 8369B CPU @ 2.70GHz
-+ 8核 32GB
++ Intel(R) Xeon(R) Platinum 8369B CPU @ 2.70GHz 8核 32GB
 + python环境为LabGuide中提供的`itrex` conda环境
 + 中文大模型为`ChatGLM3-6B`
++ [intel-extension-for-transformers](https://github.com/intel/intel-extension-for-transformers)
 
 ## 实验步骤
 
@@ -33,17 +33,17 @@
 
 可以看到bot可以给出合理且正确的回复，并从史料中提取相关的内容来提高回复的质量。不足之处在于`ChatGLM3-6B`的token数较少，没能给出更多的信息。
 
-![Normal Answer](./normal_answer.png)
+![Normal Answer](./figs/normal_answer.png)
 
 但同时，也有一些提供错误信息的情况，例如：
 
-![Wrong Answer](./wrong_answer.png)
+![Wrong Answer](./figs/wrong_answer.png)
 
 #### 攻击尝试
 
 在与bot友好交流的同时，我也尝试进行了**简易**的提示词注入攻击，但是可以看到`ChatGLM3-6B`做了很好的alignment导致攻击失败：
 
-![Attack Try](./attack_try.png)
+![Attack Try](./figs/attack_try.png)
 
 ## 实验总结
 
